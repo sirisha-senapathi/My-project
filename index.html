@@ -3,37 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Random Color Generator</title>
+  <title>Personalized Learning Platform Flowchart</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
       text-align: center;
-      padding: 50px;
-      transition: background-color 0.3s;
     }
-    #colorBox {
-      margin-top: 20px;
-      font-size: 24px;
+
+    .box {
+      display: inline-block;
+      background: #fff;
+      padding: 15px 25px;
+      margin: 10px;
+      border: 2px solid #007bff;
+      border-radius: 8px;
       font-weight: bold;
+      position: relative;
     }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
+
+    .arrow {
+      font-size: 24px;
+      display: block;
+      margin: 10px 0;
+    }
+
+    .flow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (min-width: 600px) {
+      .horizontal {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .horizontal .arrow {
+        margin: 0 10px;
+        transform: rotate(90deg);
+      }
     }
   </style>
 </head>
 <body>
-  <h1>🎨 Random Color Generator</h1>
-  <button onclick="generateColor()">Generate Color</button>
-  <div id="colorBox">#FFFFFF</div>
 
-  <script>
-    function generateColor() {
-      const color = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
-      document.body.style.backgroundColor = color;
-      document.getElementById('colorBox').textContent = color;
-    }
-  </script>
+  <h1>📚 Personalized Learning Platform - Flowchart</h1>
+
+  <div class="flow">
+    <div class="box">User Login / Signup</div>
+    <span class="arrow">⬇️</span>
+
+    <div class="box">Initial Assessment</div>
+    <span class="arrow">⬇️</span>
+
+    <div class="box">Personalized Learning Path Generated</div>
+    <span class="arrow">⬇️</span>
+
+    <div class="box">Content Delivery (Videos, Quizzes, Notes)</div>
+    <span class="arrow">⬇️</span>
+
+    <div class="box">Track Progress</div>
+    <span class="arrow">⬇️</span>
+
+    <div class="box">Adaptive Adjustments</div>
+    <span class="arrow">⬇️</span>
+
+    <div class="box">Completion & Certification</div>
+  </div>
+
 </body>
 </html>
