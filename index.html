@@ -1,16 +1,39 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Heading tag</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Color Generator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+      transition: background-color 0.3s;
+    }
+    #colorBox {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-<h1>Hello Siri</h1>
-<h2>Hello Siri</h2>
-<h3>Hello Siri</h3>
-<h4>Hello Siri</h4>
-<h5>Hello Siri</h5>
-<h6>Hello Siri</h6>
+  <h1>🎨 Random Color Generator</h1>
+  <button onclick="generateColor()">Generate Color</button>
+  <div id="colorBox">#FFFFFF</div>
+
+  <script>
+    function generateColor() {
+      const color = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+      document.body.style.backgroundColor = color;
+      document.getElementById('colorBox').textContent = color;
+    }
+  </script>
 </body>
 </html>
-
-
